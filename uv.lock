@@ -27,7 +27,7 @@ wheels = [
 
 [[package]]
 name = "bandit"
-version = "1.9.2"
+version = "1.9.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "colorama", marker = "sys_platform == 'win32'" },
@@ -35,9 +35,9 @@ dependencies = [
     { name = "rich" },
     { name = "stevedore" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/cf/72/f704a97aac430aeb704fa16435dfa24fbeaf087d46724d0965eb1f756a2c/bandit-1.9.2.tar.gz", hash = "sha256:32410415cd93bf9c8b91972159d5cf1e7f063a9146d70345641cd3877de348ce", size = 4241659, upload-time = "2025-11-23T21:36:18.722Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/89/76/a7f3e639b78601118aaa4a394db2c66ae2597fbd8c39644c32874ed11e0c/bandit-1.9.3.tar.gz", hash = "sha256:ade4b9b7786f89ef6fc7344a52b34558caec5da74cb90373aed01de88472f774", size = 4242154, upload-time = "2026-01-19T04:05:22.802Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/55/1a/5b0320642cca53a473e79c7d273071b5a9a8578f9e370b74da5daa2768d7/bandit-1.9.2-py3-none-any.whl", hash = "sha256:bda8d68610fc33a6e10b7a8f1d61d92c8f6c004051d5e946406be1fb1b16a868", size = 134377, upload-time = "2025-11-23T21:36:17.39Z" },
+    { url = "https://files.pythonhosted.org/packages/e0/0b/8bdc52111c83e2dc2f97403dc87c0830b8989d9ae45732b34b686326fb2c/bandit-1.9.3-py3-none-any.whl", hash = "sha256:4745917c88d2246def79748bde5e08b9d5e9b92f877863d43fab70cd8814ce6a", size = 134451, upload-time = "2026-01-19T04:05:20.938Z" },
 ]
 
 [[package]]
@@ -1025,14 +1025,14 @@ wheels = [
 
 [[package]]
 name = "toy-gpt-train-100-unigram"
-version = "0.9.3"
+version = "0.9.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "datafun-toolkit" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/53/3d/8e5fde10df2e10a02d190f479983a559c6b4d9592822f995c11899b35111/toy_gpt_train_100_unigram-0.9.3.tar.gz", hash = "sha256:e891f0b8ff568bcf9f1cfa4d556648187ef3755f8fd9f9cb69ee46b7d220c91d", size = 80609, upload-time = "2026-01-17T13:37:38.849Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/05/19/5e33775aed082a685031c3e2c5e2d74c7cbf839e44157ac8c94cc387fcea/toy_gpt_train_100_unigram-0.9.5.tar.gz", hash = "sha256:7d5feaf2afcab061d1f0092c60d75d8c8418d61f21da1f054275b1cbd8e9f619", size = 82108, upload-time = "2026-01-19T03:57:15.965Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/5e/fa/7fd705dc8e63294142d07693c6299560342b798190211a3bbcfc0efe782d/toy_gpt_train_100_unigram-0.9.3-py3-none-any.whl", hash = "sha256:576a3981d924d31094083e83100cbcc8215f31e5ba8704363452d474e09b5afa", size = 22264, upload-time = "2026-01-17T13:37:37.205Z" },
+    { url = "https://files.pythonhosted.org/packages/3c/fc/a5398ebb09c5048bb7f6d2cdb9ead3d0d89b26880020a48eb6dcacb1b7e5/toy_gpt_train_100_unigram-0.9.5-py3-none-any.whl", hash = "sha256:c32118a933b345d3d073e65d5a433eb214698214720deb408cc95c2b372c4459", size = 24305, upload-time = "2026-01-19T03:57:14.551Z" },
 ]
 
 [[package]]
@@ -1080,7 +1080,7 @@ requires-dist = [
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=9.0.2" },
     { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=7.0.0" },
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.14.13" },
-    { name = "toy-gpt-train-100-unigram", specifier = ">=0.9.3" },
+    { name = "toy-gpt-train-100-unigram", specifier = ">=0.9.5" },
     { name = "twine", marker = "extra == 'dev'", specifier = ">=6.2.0" },
     { name = "validate-pyproject", marker = "extra == 'dev'", specifier = ">=0.24.1" },
 ]

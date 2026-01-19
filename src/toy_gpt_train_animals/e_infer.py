@@ -32,6 +32,7 @@ from toy_gpt_train.e_infer import (
     require_artifacts,
     top_k,
 )
+from toy_gpt_train.prompts import parse_args
 
 JsonScalar = str | int | float | bool | None
 JsonValue = JsonScalar | list["JsonValue"] | dict[str, "JsonValue"]
@@ -44,34 +45,6 @@ ARTIFACTS_DIR: Final[Path] = BASE_DIR / "artifacts"
 META_PATH: Final[Path] = ARTIFACTS_DIR / "00_meta.json"
 VOCAB_PATH: Final[Path] = ARTIFACTS_DIR / "01_vocabulary.csv"
 WEIGHTS_PATH: Final[Path] = ARTIFACTS_DIR / "02_model_weights.csv"
-
-
-def parse_args() -> argparse.Namespace:
-    """Parse command-line arguments."""
-    parser = argparse.ArgumentParser(
-        description="Toy GPT inference from saved artifacts."
-    )
-    parser.add_argument(
-        "--start",
-        dest="start_token",
-        default="",
-        help="Start token for generation. If omitted, uses the first token in the vocabulary.",
-    )
-    parser.add_argument(
-        "--num",
-        dest="num_tokens",
-        type=int,
-        default=10,
-        help="Number of tokens to generate (not counting the start token).",
-    )
-    parser.add_argument(
-        "--topk",
-        dest="topk",
-        type=int,
-        default=3,
-        help="Show top-k next-token probabilities for the start token.",
-    )
-    return parser.parse_args()
 
 
 def main() -> None:
