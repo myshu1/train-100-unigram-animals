@@ -4,7 +4,7 @@ tests/test_train.py
 REQ: Verify that the package can be imported.
 WHY: Minimal correctness requirement.
 
-REQ: Verify that demo modules can execute without raising exceptions.
+
 WHY: Each stage should be able to be run independently on any platform.
 """
 
