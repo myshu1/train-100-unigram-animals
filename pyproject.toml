@@ -42,14 +42,14 @@ classifiers = [
 dependencies = [
     # REQ.DEPS: External packages used by the project code.
     "datafun-toolkit>=0.9.5",
-    "toy-gpt-train-100-unigram>=0.9.5",
+    "toy-gpt-train-100-unigram>=0.9.6",
 ]
 
 [project.optional-dependencies]
 # WHY: Optional dependency groups keep the core install clean and focused.
 dev = [
     # REQ.DEV.DEPS: External packages used for linting, testing, type checking, etc.
-    "bandit>=1.9.2",
+    "bandit>=1.9.3",
     "deptry>=0.10.1",
     "packaging>=25.0",
     "pre-commit>=4.5.1",

@@ -14,6 +14,11 @@ Responsibilities:
 Notes:
 - This module does NOT retrain by default.
 - If artifacts are missing, run d_train.py first.
+
+Unigram inference:
+    The model ignores all context and predicts based solely on
+    corpus word frequencies. Every call to forward() returns the
+    same probability distribution.
 """
 
 import argparse
@@ -61,41 +66,33 @@ def main() -> None:
     meta: JsonObject = load_meta(META_PATH)
     vocab: ArtifactVocabulary = load_vocabulary_csv(VOCAB_PATH)
 
-    model: SimpleNextTokenModel = SimpleNextTokenModel(vocab_size=vocab.vocab_size())
-    model.weights = load_model_weights_csv(WEIGHTS_PATH, vocab_size=vocab.vocab_size())
+    v: int = vocab.vocab_size()
+    model: SimpleNextTokenModel = SimpleNextTokenModel(vocab_size=v)
+    model.weights = load_model_weights_csv(WEIGHTS_PATH, vocab_size=v)
 
     args: argparse.Namespace = parse_args()
-
-    # Choose a start token.
-    start_token: str = args.start_token
-    if not start_token:
-        # Deterministic fallback: smallest token_id present
-        first_id = min(vocab.id_to_token.keys())
-        start_token = vocab.id_to_token[first_id]
 
     LOG.info(
         f"Loaded repo_name={meta.get('repo_name')} model_kind={meta.get('model_kind')}"
     )
-    LOG.info(f"Vocab size: {vocab.vocab_size()}")
-    LOG.info(f"Start token: {start_token!r}")
+    LOG.info(f"Vocab size: {v}")
+    LOG.info("Unigram model: predictions are the same regardless of input.")
 
-    start_id = vocab.get_token_id(start_token)
-    if start_id is not None:
-        probs: list[float] = model.forward(current_id=start_id)
-        LOG.info(f"Top next-token predictions after {start_token!r}:")
-        for tok_id, prob in top_k(probs, k=max(1, args.topk)):
-            tok: str | None = vocab.get_id_token(tok_id)
-            LOG.info(f"  {tok!r} (ID {tok_id}): {prob:.4f}")
+    # Show predictions (same for any input)
+    probs: list[float] = model.forward()
+    LOG.info("Top next-token predictions (based on corpus frequency):")
+    for tok_id, prob in top_k(probs, k=max(1, args.topk)):
+        tok: str | None = vocab.get_id_token(tok_id)
+        LOG.info(f"  {tok!r} (ID {tok_id}): {prob:.4f}")
 
     generated: list[str] = generate_tokens_unigram(
         model=model,
         vocab=vocab,
-        start_token=start_token,
         num_tokens=max(0, args.num_tokens),
     )
 
     LOG.info("Generated sequence:")
-    LOG.info("  " + " ".join(generated))
+    LOG.info(f"  {' '.join(generated)}")
 
 
 if __name__ == "__main__":
